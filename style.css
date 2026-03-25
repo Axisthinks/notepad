@@ -1,0 +1,177 @@
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+.login-page {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  background: #f8f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #e0e7ff;
+  padding: 30px;
+  border-radius: 20px;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.login-box {
+  width: 320px;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.app {
+  display: none;
+  height: 100vh;
+  background: #f8f9fc;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #5a67d8, #434190);
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar button {
+  background: white;
+  color: #5a67d8;
+  font-weight: 600;
+}
+
+.sidebar button:hover {
+  background: #e0e7ff;
+}
+
+.main {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.topbar h1 {
+  margin-bottom: 20px;
+}
+
+
+.add-note {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.add-note input {
+  flex: 1;
+}
+
+.add-note button {
+  background: #5a67d8;
+  color: white;
+}
+
+.add-note button:hover {
+  background: #434190;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.note {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  position: relative;
+  transition: 0.3s;
+}
+
+.note:hover {
+  transform: translateY(-5px);
+}
+
+.note button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff6b6b;
+  color: white;
+}
+
+.line1 {
+  height: 12px;
+  background: #5a67d8;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.line2 {
+  height: 10px;
+  background: #a5b4fc;
+  border-radius: 5px;
+  width: 70%;
+}

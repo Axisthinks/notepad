@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Notes App</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+</head>
+
+<body>
+
+<div class="login-page" id="loginPage">
+
+  <div class="left">
+    <div class="card">
+
+      
+      <svg width="70" height="70" viewBox="0 0 80 80">
+        <circle cx="40" cy="40" r="40" fill="#5a67d8"/>
+        <circle cx="40" cy="28" r="9" fill="#f1c27d"/>
+        <rect x="28" y="38" width="24" height="18" rx="6" fill="white"/>
+        <rect x="30" y="42" width="20" height="12" rx="3" fill="#e0e7ff"/>
+        <line x1="32" y1="46" x2="46" y2="46" stroke="#5a67d8" stroke-width="1"/>
+        <line x1="32" y1="49" x2="44" y2="49" stroke="#5a67d8" stroke-width="1"/>
+      </svg>
+
+      <div style="flex:1">
+        <div class="line1"></div>
+        <div class="line2"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="login-box">
+      <h2>Sign in</h2>
+      <p style="color:#777;margin-bottom:20px;">Access your notes</p>
+
+      <div class="input-group">
+        <input id="username" placeholder="Username">
+      </div>
+
+      <div class="input-group">
+        <input id="password" type="password" placeholder="Password">
+      </div>
+
+      <button style="width:100%;background:#5a67d8;color:white;" onclick="login()">Sign In</button>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="app" id="appPage">
+
+  <div class="container">
+
+    <div class="sidebar">
+      <div>
+        <h2>Notes</h2>
+        <p id="userText"></p>
+      </div>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="main">
+
+      <div class="topbar">
+        <h1>Your Notes</h1>
+      </div>
+
+      <div class="add-note">
+        <input id="noteInput" placeholder="Write something..." />
+        <button onclick="addNote()">Add Note</button>
+      </div>
+
+      <div class="notes" id="notesContainer"></div>
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
